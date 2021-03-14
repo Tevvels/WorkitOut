@@ -1,0 +1,25 @@
+seed notes
+
+requires mongoose and database
+
+workout seeds
+
+    day
+
+    type:resistnece,
+    name bicep curl
+    duration
+    weight
+    reps
+    sets
+    
+
+    type: cardio
+    name running
+    duration
+    distance
+
+
+    db.workout
+    workout collection.
+    
