@@ -3,7 +3,7 @@ const Workout = require("../models/workout.js")
 
 
 router.post("/api/workouts",({body},res)=>{
-    Workout.create(body)
+    Workout.create({})
     .then(dbWorkout =>{
         res.json(dbWorkout);
     })
@@ -44,7 +44,7 @@ router.get("/api/workouts",(req,res)=>{
         }
     ])
     .then(workout => {
-        res.json(dbWorkout)
+        res.json(workout)
     })
     .catch(err => {
         res.status(400).json(err)
@@ -53,7 +53,7 @@ router.get("/api/workouts",(req,res)=>{
 
 
 router.get("/api/workouts/range",(req,res)=>{
-    workout.aggregate([
+    Workout.aggregate([
         {
         $addFields:{
             totalDuration:{
